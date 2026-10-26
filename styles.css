@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
     --ltpurple: hsl(260, 100%, 95%);
@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 
 }
 
@@ -67,11 +67,12 @@ body {
 
 .name {
     font-size: var(--name);
-    font-weight: var(--headlines);
+    font-weight: 500;
 }
 
 .subtitle {
     font-size: var(--subtitle);
+    font-weight: 200;
 }
 
 .headline {
@@ -104,4 +105,67 @@ body {
 
 #clifford .avatar {
     border-color: var(--mdpurple);
+}
+
+#walters {
+    background-color: var(--gray500);
+}
+
+#walters .avatar {
+    border-color: var(--gray200);
+}
+
+#walters .name,
+#walters .quote {
+    color: var(--gray100);
+    font-weight: var(--text);
+}
+
+#walters .subtitle {
+    color: var(--gray100);
+    font-weight: 200;
+}
+
+#walters .headline {
+    font-weight: var(--headlines);
+    color: var(--white);
+}
+
+#harmon,
+#whittle {
+    background-color: var(--white);
+}
+
+#harmon .avatar,
+#whittle .avatar {
+    border-color: var(--white);
+}
+
+#harmon .name,
+#harmon .headline,
+#whittle .name,
+#whittle .headline {
+    color: var(--gray500);
+
+}
+
+#harmon .subtitle,
+#harmon .quote,
+#whittle .subtitle,
+#whittle .quote {
+    color: var(--gray400);
+    font-weight: 500;
+}
+
+#abrams {
+    background-color: var(--dkblue);
+    color: var(--white);
+}
+
+#abrams .avatar {
+    border-color: var(--dkpurple);
+}
+
+#whittle {
+    margin-block-end: 2rem;
 }
