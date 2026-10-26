@@ -21,6 +21,7 @@
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -33,7 +34,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
+
     gap: 1.5rem;
 
 }
@@ -41,7 +43,7 @@ body {
 .testimonial {
     display: flex;
     flex-direction: column;
-    width: calc(100% - 8rem);
+    width: calc(100% - 6rem);
     height: auto;
     gap: 1rem;
 
@@ -168,4 +170,82 @@ body {
 
 #whittle {
     margin-block-end: 2rem;
+}
+
+@media (min-width: 64rem) {
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        width: 80%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "clifford clifford walters whittle"
+            "harmon abrams abrams whittle";
+        align-items: stretch;
+    }
+
+    .testimonial {        
+        width: auto;
+        margin: 0;    
+        box-shadow: 10px 30px 50px gray;
+    }
+
+    #clifford {
+        grid-area: clifford;
+        margin: 0;
+        position: relative;
+        isolation: isolate;
+
+    }
+
+    #clifford::before {
+        content: "";
+        position: absolute;
+
+        top: 0;
+        right: 4rem;
+
+        width: 104px;
+        height: 102px;
+
+        background-image: url('./images/bg-pattern-quotation.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        transform: rotate(-8deg);
+
+        z-index: 0;
+    }
+
+    #clifford > * {
+        position: relative;
+        z-index: 1;
+    }
+
+    #walters {
+        grid-area: walters;
+      
+    }
+
+    #whittle {
+        grid-area: whittle;
+        margin: 0;
+    }
+
+    #harmon {
+        grid-area: harmon;
+    }
+
+    #abrams {
+        grid-area: abrams;
+    }
+
 }
